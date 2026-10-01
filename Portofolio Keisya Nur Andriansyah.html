@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Keisya</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        
+        /* 1. MENGATUR BENTUK KOTAK KONTEN */
+        .kotak-konten {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            
+            /* Pasang durasi animasi bawaan untuk semua kotak */
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards; 
+        }
+        
+        h1, h2 { color: darkblue; }
+        p { font-size: 1.2rem; color: #333; text-align: left; }
+
+        /* 2. MEMBUAT VARIASI ARAH ANIMASI LOKAL */
+        
+        /* Kotak 1: Meluncur dari Bawah */
+        .animasi-bawah {
+            animation-name: meluncurBawah;
+        }
+        
+        /* Kotak 2: Meluncur dari Kanan */
+        .animasi-kanan {
+            animation-name: meluncurKanan;
+        }
+        
+        /* Kotak 3: Efek Membesar (Zoom In) */
+        .animasi-zoom {
+            animation-name: efekZoom;
+        }
+
+        /* 3. TIMELINE GERAKAN (KEYFRAMES) NYATA */
+        @keyframes meluncurBawah {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes meluncurKanan {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes efekZoom {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- KOTAK 1: MUNCUL MELUNCUR DARI BAWAH -->
+    <div class="kotak-konten animasi-bawah">
+        <h1>Profil Singkat</h1>
+        <img src="profil.jpg" alt="Foto Profil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 15px auto; border: 3px solid darkblue;">
+        <p>Halo, saya Ryan. Saya adalah seorang lulusan Teknik Komputer dan Jaringan yang disiplin, cekatan, dan memiliki komitmen tinggi terhadap tanggung jawab kerja. Saya selalu bersemangat untuk mempelajari hal-hal baru dan siap beradaptasi dengan berbagai tantangan di dunia profesional.</p>
+    </div>
+
+    <!-- KOTAK 2: MUNCUL MELUNCUR DARI KANAN -->
+    <div class="kotak-konten animasi-kanan">
+        <h2>Riwayat Pendidikan & PKL</h2>
+        <p>Lulusan SMK BINA KARYA MANDIRI dengan jurusan Teknik Komputer dan Jaringan. memiliki pengalaman pkl di KPP MADYA BEKASI BARAT dalam bidang arsip dokumen. Selama masa pkl tersebut saya memiliki skill dalam menginput data pada berkas serta tanggal dan tahun, cekatan dan bertanggung jawab atas semua dokumen dokumen perusahaan.</p>
+    </div>
+
+    <!-- KONTEN 3: MUNCUL DENGAN EFEK ZOOM -->
+    <div class="kotak-konten animasi-zoom">
+        <h2>Minat & Pengalaman Kerja</h2>
+        <p>Meskipun saya memiliki latar belakang di bidang Teknik Komputer dan Jaringan, Saya memiliki minat yang tinggi dalam operasional kendaraan. Saya memiliki total pengalaman mengemudi selama 3 tahun termasuk 1 tahun di antaranya berfokus pada driver online dan pengiriman barang.</p>
+    </div>
+    <!-- KOMPONEN TAMBAHAN 1: DAFTAR KEAHLIAN (SKILLS) -->
+    <div class="kotak-konten animasi-zoom">
+        <h2>Keahlian Utama (Skills)</h2>
+        <ul style="font-size: 1.2rem; color: #333; padding-left: 20px;">
+            <li><b>Manajemen & Arsip Dokumen:</b> Berpengalaman menginput dan merapikan berkas data secara akurat.</li>
+            <li><b>Operasional Logistik:</b> Berpengalaman 3 tahun dalam mengemudi, pengiriman barang, dan rute jalan.</li>
+            <li><b>Teknis TKJ:</b> Memiliki pemahaman dasar tentang perangkat komputer dan jaringan.</li>
+            <li><b>Karakter Kerja:</b> Cekatan, bertanggung jawab, tepat waktu, dan siap bekerja di bawah tekanan.</li>
+        </ul>
+    </div>
+
+    <!-- KOMPONEN TAMBAHAN 2: TOMBOL KONTAK HUBUNGI (CONTACT) -->
+    <div class="kotak-konten animasi-bawah" style="text-align: center;">
+        <h2>Hubungi Saya</h2>
+        <p style="text-align: center;">Tertarik untuk bekerja sama atau memiliki pertanyaan? Silakan hubungi saya melalui tombol di bawah ini:</p>
+        
+        <!-- Tombol WhatsApp Interaktif (Ganti angka 628xxx dengan nomor WA Anda jika mau) -->
+        <a href="https://wa.me/6285117101401" style="display: inline-block; padding: 12px 25px; background-color: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 8px; margin: 10px; font-size: 1.1rem;">Hubungi via WhatsApp</a>
+
+        </a>
+
+        <!-- Tombol Email -->
+        <a href="mailto:keisyanurandriansyah@gmail.com" style="display: inline-block; padding: 12px 25px; background-color: #3498db; color: white; text-decoration: none; font-weight: bold; border-radius: 8px; margin: 10px; font-size: 1.1rem;">
+            ✉️ Kirim Email
+        </a>
+    </div>
+
+</body>
+</html>
