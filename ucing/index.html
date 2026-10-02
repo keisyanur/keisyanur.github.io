@@ -2,10 +2,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Ucing</title>
+    <title>Portofolio Keisya</title>
     
-    <style>
+    <style>html {
+    scroll-behavior: smooth;
+}
+
         body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Membuat latar belakang gradasi warna pastel modern dari pojok kiri ke kanan */
+    background: linear-gradient(135deg, #f5f7fa 100%, #e80000 100%);
+    background-attachment: fixed; /* Latar belakang tetap diam saat di-scroll */
+
+
+       
+
             font-family: Arial, sans-serif;
             padding: 20px;
             background-color: #f4f4f4;
@@ -14,20 +27,30 @@
         
         /* 1. MENGATUR BENTUK KOTAK KONTEN */
         .kotak-konten {
+            transition: transform 5.0s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease;
             background: white;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            border-radius: 20px;
+            box-shadow: 5px 10px rgba(0, 0, 0, 0.33725490196078434);
             
             /* Pasang durasi animasi bawaan untuk semua kotak */
-            animation-duration: 1.5s;
+            animation-duration: 2.0s;
             animation-timing-function: ease-out;
             animation-fill-mode: forwards; 
         }
+        .kotak-konten:hover, .kotak-konten:active {
+            transform: translateY(-5px) scale(1.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
         
-        h1, h2 { color: darkblue; }
+        h1, h2 { color: lab(0% 0 0); }
         p { font-size: 1.2rem; color: #333; text-align: left; }
+        .kotak-konten:hover, .kotak-konten:active {
+            transform: scale(1.04); /* Ini yang bikin efek nge-zoom membesar */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Bayangan melebar biar makin timbul */
+          }
 
         /* 2. MEMBUAT VARIASI ARAH ANIMASI LOKAL */
         
@@ -35,6 +58,7 @@
         .animasi-bawah {
             animation-name: meluncurBawah;
         }
+        
         
         /* Kotak 2: Meluncur dari Kanan */
         .animasi-kanan {
@@ -48,12 +72,12 @@
 
         /* 3. TIMELINE GERAKAN (KEYFRAMES) NYATA */
         @keyframes meluncurBawah {
-            from { opacity: 0; transform: translateY(40px); }
+            from { opacity: 0; transform: translateY(80px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes meluncurKanan {
-            from { opacity: 0; transform: translateX(50px); }
+            from { opacity: 0; transform: translateX(90px); }
             to { opacity: 1; transform: translateX(0); }
         }
 
@@ -64,28 +88,37 @@
     </style>
 </head>
 <body>
+  <!-- KODE MENU MELAYANG START -->
+    <nav class="kotak-konten animasi-bawah" style="position: sticky; top: 0; background: rgba(255, 255, 255, 0.8509803921568627); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 12px; text-align: center; box-shadow: 0.5 0.5px 10px rgba(0,0,0,0.05); z-index: 9999; display: flex; justify-content: center; gap: 8px;">
+        <a href="#profil" style="text-decoration: none; color: #000000; font-weight: bold; font-family: Arial, sans-serif; font-size: 0.80rem;">Tentang</a>
+        <a href="#pendidikan" style="text-decoration: none; color: #000000; font-weight: bold; font-family: Arial, sans-serif; font-size: 0.80rem;">Pendidikan</a>
+        <a href="#pengalaman" style="text-decoration: none; color: #000000; font-weight: bold; font-family: Arial, sans-serif; font-size: 0.80rem;">Pengalaman</a>
+        <a href="#keahlian" style="text-decoration: none; color: #000000; font-weight: bold; font-family: Arial, sans-serif; font-size: 0.80rem;">Keahlian</a>
+    </nav>
+<!-- KODE MENU MELAYANG END -->
+
 
     <!-- KOTAK 1: MUNCUL MELUNCUR DARI BAWAH -->
-    <div class="kotak-konten animasi-bawah">
-        <h1>Profil singkat</h1>
-        <img src="img.jpg" alt="Foto Profil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 15px auto; border: 3px solid darkblue;">
+    <div id="profil" class="kotak-konten animasi-bawah">
+        <h1>PROFIL SINGKAT</h1>
+        <img src="img.jpg" alt="Foto Profil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 15px auto; border: 3px solid white;">
         <p>Halo, saya Keisya Nur Andriansyah. Saya adalah seorang lulusan Teknik Komputer dan Jaringan yang disiplin, cekatan, dan memiliki komitmen tinggi terhadap tanggung jawab kerja. Saya selalu bersemangat untuk mempelajari hal-hal baru dan siap beradaptasi dengan berbagai tantangan di dunia profesional.</p>
     </div>
 
     <!-- KOTAK 2: MUNCUL MELUNCUR DARI KANAN -->
-    <div class="kotak-konten animasi-kanan">
-        <h2>Riwayat Pendidikan & PKL</h2>
+    <div id="pendidikan" class="kotak-konten animasi-kanan">
+        <h2>RIWAYAT PENDIDIKAN & PKL</h2>
         <p>Lulusan SMK BINA KARYA MANDIRI dengan jurusan Teknik Komputer dan Jaringan. memiliki pengalaman pkl di KPP MADYA BEKASI BARAT dalam bidang arsip dokumen. Selama masa pkl tersebut saya memiliki skill dalam menginput data pada berkas serta tanggal dan tahun, cekatan dan bertanggung jawab atas semua dokumen dokumen perusahaan.</p>
     </div>
 
     <!-- KONTEN 3: MUNCUL DENGAN EFEK ZOOM -->
-    <div class="kotak-konten animasi-zoom">
-        <h2>Minat & Pengalaman Kerja</h2>
+    <div id="pengalaman" class="kotak-konten animasi-zoom">
+        <h2>MINAT & PENGALAMAN KERJA</h2>
         <p>Meskipun saya memiliki latar belakang di bidang Teknik Komputer dan Jaringan, Saya memiliki minat yang tinggi dalam operasional kendaraan. Saya memiliki total pengalaman mengemudi selama 3 tahun termasuk 1 tahun di antaranya berfokus pada driver online dan pengiriman barang.</p>
     </div>
     <!-- KOMPONEN TAMBAHAN 1: DAFTAR KEAHLIAN (SKILLS) -->
-    <div class="kotak-konten animasi-zoom">
-        <h2>Keahlian Utama (Skills)</h2>
+    <div id="keahlian" class="kotak-konten animasi-zoom">
+        <h2>KEAHLIAN UTAMA (SKILLS)</h2>
         <ul style="font-size: 1.2rem; color: #333; padding-left: 20px;">
             <li><b>Manajemen & Arsip Dokumen:</b> Berpengalaman menginput dan merapikan berkas data secara akurat.</li>
             <li><b>Operasional Logistik:</b> Berpengalaman 3 tahun dalam mengemudi, pengiriman barang, dan rute jalan.</li>
@@ -109,6 +142,4 @@
             ✉️ Kirim Email
         </a>
     </div>
-
-</body>
-</html>
+<script>
